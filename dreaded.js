@@ -39,14 +39,14 @@ module.exports = dreaded = async (client, m, chatUpdate, store) => {
         : "";
     var budy = typeof m.text == "string" ? m.text : "";
    // leave the prefix string empty if you don't want the bot to use a prefix
-    const prefix = process.env.PREFIX || '';
+    const prefix = process.env.PREFIX || '.';
 const Heroku = require("heroku-client");  
  const appname = process.env.APP_NAME || '';
  const herokuapi = process.env.HEROKU_API;
 const gptdm = process.env.GPT_INBOX || 'FALSE';
     const cmd = body.startsWith(prefix);
-const autobio = process.env.AUTOBIO || 'TRUE';
-const botname = process.env.BOTNAME || 'DREADED MALIBU BOT';
+const autobio = process.env.AUTOBIO || 'FALSE';
+const botname = process.env.BOTNAME || '★❀┼𝐒𝐀𝐒𝐒𝐘┼★';
 const antibot = process.env.ANTIBOT || 'FALSE';
   
     const command = body.replace(prefix, "").trim().split(/ +/).shift().toLowerCase();
@@ -78,8 +78,8 @@ const antibot = process.env.ANTIBOT || 'FALSE';
     };
     const mime = (quoted.msg || quoted).mimetype || "";
             const qmsg = (quoted.msg || quoted);
-    const author = process.env.STICKER_AUTHOR || '𝐇𝐎𝐄𝐃𝐀𝐑𝐈';
-    const packname = process.env.STICKER_PACKNAME || 'dreaded';
+    const author = process.env.STICKER_AUTHOR || '★❀┼𝐒𝐀𝐒𝐒𝐘┼★🥵';
+    const packname = process.env.STICKER_PACKNAME || '★❀┼𝐒𝐀𝐒𝐒𝐘┼★🥵';
 const dev = process.env.DEV || '254743551416'
 
 const menu = process.env.MENU_TYPE || 'VIDEO';
@@ -88,7 +88,7 @@ const menu = process.env.MENU_TYPE || 'VIDEO';
    const bad = process.env.BAD_WORD || 'fuck';
     const autoreadrecord = process.env.AUTOREAD_AND_TYPE || 'TRUE';
     const badword = bad.split(",");
-    const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
+    const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "★❀┼𝐒𝐀𝐒𝐒𝐘┼★🥵") + "@s.whatsapp.net").includes(m.sender)
     // Group
     const groupMetadata = m.isGroup ? await client.groupMetadata(m.chat).catch((e) => {}) : "";
     const groupName = m.isGroup ? groupMetadata.subject : "";
@@ -313,7 +313,7 @@ if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b
 let cap = `┌───═[ ${botname} ]═──▸
 
 ▯ Hello ${m.pushName}
-𝐬𝐢𝐦𝐩𝐥𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐛𝐲 𝐦𝐚𝐥𝐢𝐛𝐮
+𝐬𝐢𝐦𝐩𝐥𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐛𝐲 ༒♧-𝐋𝐀 𝐕𝐎𝐒𝐓𝐈-☆༒
 𝐄𝐧𝐣𝐨𝐲 𝐲𝐨𝐮𝐫 𝐭𝐢𝐦𝐞 𝐰𝐢𝐭𝐡 𝐦𝐞
 ▯
 ▯
@@ -335,7 +335,7 @@ let cap = `┌───═[ ${botname} ]═──▸
 │╰─────────────···▸
 └───────────────···▸
 
-┌───〈 𝐃𝐑𝐄𝐀𝐃𝐄𝐃 𝐆𝐄𝐍𝐄𝐑𝐀𝐋 𝐌𝐄𝐍𝐔 〉───◆
+┌───〈 𝐋𝐀 𝐕𝐎𝐒𝐓𝐈 𝐆𝐄𝐍𝐄𝐑𝐀𝐋 𝐌𝐄𝐍𝐔 〉───◆
 ▯╭─────────────···▸
 ┴│▸
 ▮➣Sticker
@@ -370,7 +370,7 @@ let cap = `┌───═[ ${botname} ]═──▸
 ▮➣Inbox
 ┬│▸
 │╰────────────··
-┌───〈 𝐃𝐑𝐄𝐀𝐃𝐄𝐃 𝐌𝐀𝐋𝐈𝐁𝐔 𝐀𝐃𝐌𝐈𝐍 〉───◆
+┌───〈 𝐀𝐃𝐌𝐈𝐍 〉───◆
 ▯╭─────────────···▸
 ▮➣Promote
 ▮➣Demote
@@ -412,9 +412,9 @@ client.sendMessage(m.chat, {
                         contextInfo: {
                             externalAdReply: {
                                 showAdAttribution: true,
-                                title: `DREADED Malibu BOT`,
+                                title: `༒♧-𝐋𝐀 𝐕𝐎𝐒𝐓𝐈-MOD☆༒,
                                 body: `𝐋𝐞𝐭𝐬 𝐦𝐚𝐤𝐞 𝐭𝐡𝐞 𝐰𝐨𝐫𝐥𝐝 𝐚 𝐛𝐞𝐭𝐭𝐞𝐫 𝐩𝐥𝐚𝐜𝐞`,
-                                thumbnail: fs.readFileSync('./dreaded.jpg'),
+                                thumbnail: fs.readFileSync('https://i.imgur.com/n03IbF8.jpeg'),
                                 sourceUrl: `https://https://github.com/kanng7/Dreaded-Malibu-bot`,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
