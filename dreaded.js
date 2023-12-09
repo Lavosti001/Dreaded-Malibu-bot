@@ -46,7 +46,7 @@ const Heroku = require("heroku-client");
 const gptdm = process.env.GPT_INBOX || 'FALSE';
     const cmd = body.startsWith(prefix);
 const autobio = process.env.AUTOBIO || 'TRUE';
-const botname = process.env.BOTNAME || 'DREADED MALIBU BOT';
+const botname = process.env.BOTNAME || 'LA VOSTI';
 const antibot = process.env.ANTIBOT || 'FALSE';
   
     const command = body.replace(prefix, "").trim().split(/ +/).shift().toLowerCase();
@@ -78,9 +78,9 @@ const antibot = process.env.ANTIBOT || 'FALSE';
     };
     const mime = (quoted.msg || quoted).mimetype || "";
             const qmsg = (quoted.msg || quoted);
-    const author = process.env.STICKER_AUTHOR || '𝐇𝐎𝐄𝐃𝐀𝐑𝐈';
-    const packname = process.env.STICKER_PACKNAME || 'dreaded';
-const dev = process.env.DEV || '254743551416'
+    const author = process.env.STICKER_AUTHOR || 'LA VOSTI';
+    const packname = process.env.STICKER_PACKNAME || 'la vosti';
+const dev = process.env.DEV || '97470463628'
 
 const menu = process.env.MENU_TYPE || 'VIDEO';
  const DevDreaded = dev.split(",");
